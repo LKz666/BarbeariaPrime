@@ -4,7 +4,7 @@
 
 `Matéria: Trabalho Interdisciplinar: Desenvolvimento de Aplicação Interativa`
 
-`SEMESTRE: 2º`
+`SEMESTRE: 3º`
 
 ## Integrantes 
 
