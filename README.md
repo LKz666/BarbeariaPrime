@@ -1,4 +1,4 @@
-# TIDAI
+# Organiza
 
 `Curso: Análise e Desenvolvimento de Sistemas`
 
