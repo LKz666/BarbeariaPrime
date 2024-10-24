@@ -1,4 +1,4 @@
-# Organiza
+# Barbearia Prime
 
 `Curso: Análise e Desenvolvimento de Sistemas`
 
@@ -9,6 +9,7 @@
 ## Integrantes 
 
 * Lucas Eduardo Pereira de Paula
+* Nicole Kimberly Ferreira
 * Ragi William Souza Saliba
 * Samuel Santos Maciel
 * Victor Gomes de Miranda
