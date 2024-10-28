@@ -9,10 +9,20 @@ body{
 
 main{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 0;
-    height: 986px;
+    height: 100%;
+.title{
+    color: white;
+}
+    .image img{
+        height: 500px;
+        width: 100%;
+        justify-content: center;
+        border-radius: 10px;
+      
+    }
 
     .login{
         display: flex;
@@ -20,15 +30,15 @@ main{
         justify-content: center;
         align-items: center;
         border: 1px solid red;
-        height: 100%;
-        width: 50%;
+        height: 500px;
+        width: 70%;
         gap: 10px;
     }
 
     .login input{
-        width: 40%;
-        height: 3%;
-        border-radius: 15px;
+        width: 80%;
+        height: 5%;
+        border-radius: 5px;
         padding: 2px 4px;
         border: solid 1px gray;
         color: gray;
@@ -38,16 +48,16 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 41%;
-        height: 3.5%;
+        width: 82%;
+        height: 5.5%;
         background-color: #7A0010;
         border: solid 1px black;
-        border-radius: 15px;
+        border-radius: 5px;
         color: white;
         text-decoration: none;
     }
 
     .login #create{
-        color: aqua;
+        color: #7A0010;
     }
 }
