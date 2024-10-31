@@ -23,11 +23,11 @@ html, body {
 }
 
 .left-panel {
-    width: 50%;
+    width:50%;
     background-image: url('capa.png');
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: auto;
 }
 
 .right-panel {
