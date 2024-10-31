@@ -6,39 +6,34 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
 
     try {
         // Chamada à API para validar o login
-        const loginResponse = await fetch("URL_DA_API_DE_LOGIN", {
-            method: "POST",
+        const loginResponse = await fetch(`http://localhost:3000/api/client/${email}/${password}`, {
+            method: "GET",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ email, password })
         });
 
         if (!loginResponse.ok) {
             throw new Error("Erro no login. Verifique suas credenciais.");
         }
 
+        // Ler a resposta do login apenas uma vez
         const loginData = await loginResponse.json();
 
-        // Se login for bem-sucedido, buscar dados do cliente
-        const clientResponse = await fetch("URL_DA_API_DADOS_DO_CLIENTE", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-
-        if (!clientResponse.ok) {
-            throw new Error("Erro ao buscar dados do cliente.");
+        // Verificar se os dados do login são válidos
+        if (!loginData) {
+            throw new Error("Erro no login. Verifique suas credenciais.");
         }
 
-        const clientData = await clientResponse.json();
+        // Se o login for bem-sucedido, buscar dados do cliente
+        // (supondo que os dados do cliente sejam retornados na resposta de login)
+        const clientData = loginData; // Use os dados do login para os dados do cliente
 
         // Armazenar dados no localStorage
         localStorage.setItem("clientData", JSON.stringify(clientData));
 
         // Redirecionar para a dashboard
-        window.location.href = "../../home.html";
+        window.location.href = "home.html";
     } catch (error) {
         console.error("Erro:", error.message);
         alert(error.message); // Opcional: mostra uma mensagem de erro ao usuário

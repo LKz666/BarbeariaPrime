@@ -22,11 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
             cep: cep,
         };
 
-        console.info("Contrato:", data);
-
         try {
             // Realiza a requisição para a API
-            const response = await fetch("https://sua-api-url.com/cadastro", {
+            const response = await fetch("http://localhost:3000/api/client", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -37,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Verifica a resposta da API
             if (response.ok) {
                 // Redireciona para a página de login em caso de sucesso
-                window.location.href = "../../singIn.html";
+                window.location.href = "singIn.html";
             } else {
                 // Lida com o erro se o cadastro falhar
                 const errorData = await response.json();
